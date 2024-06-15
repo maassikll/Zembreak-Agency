@@ -1,4 +1,4 @@
-<p align="center"><a href="" ><img src="/img/Zenbreak LOGO.png" width="400" alt="Zembreak Logo"></a></p>
+<p align="center"><a href="" ><img src="public/img/ZenbreakLogo.png" width="400" alt="Zembreak Logo"></a></p>
 
 
 
