@@ -1,4 +1,4 @@
-<p align="center"><a href="" ><img src="../Agency-Laravel-Sanctum/public/img/Zenbreak LOGO.png" width="400" alt="Zembreak Logo"></a></p>
+<p align="center"><a href="" ><img src="/img/Zenbreak LOGO.png" width="400" alt="Zembreak Logo"></a></p>
 
 
 
@@ -28,7 +28,7 @@ Launch a bash console there and clone the project.
 You will need to be inside the project directory that was just created, so cd into it.
 
 
-`cd Agency-Laravel-Sanctum.git`
+`cd Agency-Laravel-Sanctum`
 
 ## 3. Install composer dependencies
 Whenever you clone a new Laravel project you must install all of the project dependencies.
