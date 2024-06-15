@@ -1,64 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="" ><img src="../Agency-Laravel-Sanctum/public/img/Zenbreak LOGO.png" width="400" alt="Zembreak Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About Zembreak
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Zembreak is a web application with api configuration , . We believe development must be an enjoyable and creative experience to be truly fulfilling. You use the system to integrate it with front-end, such as:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [Nuxtjs framework ](https://nuxt.com/).
+- [Nextjs framework ](https://nextjs.org/).
+- [Vuejs framework ](https://vuejs.org/).
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Zembreak is accessible, powerful, and provides tools required for robust applications.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Install Zembreak
 
-## Laravel Sponsors
+# Initial Setup
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 1. Clone the repository
+Find a location on your computer where you want to store the project(www is recommended). A directory made for projects is generally a good choice.
 
-### Premium Partners
+Launch a bash console there and clone the project.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+`git clone https://github.com/maassikll/Agency-Laravel-Sanctum.git`
+
+## 2. cd into the project
+You will need to be inside the project directory that was just created, so cd into it.
+
+
+`cd Agency-Laravel-Sanctum.git`
+
+## 3. Install composer dependencies
+Whenever you clone a new Laravel project you must install all of the project dependencies.
+
+`composer install`
+
+## 4. Install NPM dependencies
+Similarly to composer, npm manages javascript, css, and node packages, so make sure to install those dependencies also.
+
+`npm install`
+
+## 5. Copy the .env file
+.env files are not generally committed to source control for security reasons. But there is a .env.example which is a template of the .env file that the project requires.
+
+So you should make a copy of the .env.example file and name it .env so that you can setup your local deployment configuration in the next few steps.
+
+`cp .env.example .env`
+
+## 6. Generate an app encryption key
+Laravel requires you to have an app encryption key which is generally randomly generated and stored in your .env file. The app will use this encryption key to encode various elements of your application from cookies to password hashes and more.
+
+`php artisan key:generate`
+
+## 7. Create an empty database for the application
+Create an empty database for your project using the database tools you prefer (phpmyadmin, datagrip, or any other mysql client).
+
+## 8. In the .env file, add database information to allow Laravel to connect to the database
+You will want to allow Laravel to connect to the database that you just created in the previous step. To do this, you must add the connection credentials in the .env file and Laravel will handle the connection from there.
+
+
+## 10. Migrate the database
+Once your credentials are in the .env file, now you can migrate your database. This will create all the necessary tables in your database.
+
+`php artisan migrate`
+
+
+# During Development
+
+## Compiling assets
+To compile all sass and js assets using webpack, run the following command.
+
+`npm run dev`
+
+## Local development server
+To run a local development server you may run the following command. This will start a development server at **http://localhost:8000**.
+
+`php artisan serve`
+
+
+
+
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Zembreak Agency project, please send an e-mail to MgSnake via [maassi.kloull@gmail.com](mailto:maassi.kloull@gmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Zembreak  is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
